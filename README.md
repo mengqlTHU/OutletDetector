@@ -2,8 +2,8 @@
 
 ![example](video.gif)
 
-This is an example of training a boosted cascade of weak classifiers for electric outlet detection using OpenCV. 
-The official document is [here](https://docs.opencv.org/master/dc/d88/tutorial_traincascade.html).
+This is an example of training a boosted cascade of weak classifiers for electrical outlet detection using OpenCV. 
+The official document is [here](https://docs.opencv.org/master/dc/d88/tutorial_traincascade.html){target="_blank"}.
 
 ## Requirements
 * OpenCV=3.2.0 (OpenCV 4.x has removed cascade trainer applications. I also tried OpenCV 3.4.0, however, the result is not as good as that of 3.2.0. )
@@ -13,7 +13,7 @@ The official document is [here](https://docs.opencv.org/master/dc/d88/tutorial_t
 ## Usage
 1. Install requirements
 
-    Download [opencv 3.2.0 release package](https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.2.0/opencv-3.2.0-vc14.exe/download).
+    Download [opencv 3.2.0 release package](https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.2.0/opencv-3.2.0-vc14.exe/download){target="_blank"}.
     Extract and add %your_opencv_root%\build\x64\vc14\bin to PATH. If you are using linux, you need build the source by yourself. Remember to select BUILD_APP option.
 
     Install python requirements
@@ -49,7 +49,7 @@ The official document is [here](https://docs.opencv.org/master/dc/d88/tutorial_t
     opencv_traincascade -data classifier -vec outlet.vec -bg neg.lst -numPos 380 -numNeg 300 -numStages 15 -w 24 -h 24
     ```
     
-    The meaning of parameters can be found in the [official document](https://docs.opencv.org/master/dc/d88/tutorial_traincascade.html).
+    The meaning of parameters can be found in the [official document](https://docs.opencv.org/master/dc/d88/tutorial_traincascade.html){target="_blank"}.
     It should be noted that the -numPos should be set somewhat less than -num to make training successful.
     
 5. Test your model
