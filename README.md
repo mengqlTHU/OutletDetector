@@ -39,7 +39,7 @@ The official document is [here](https://docs.opencv.org/master/dc/d88/tutorial_t
     
 4. Start training
   
-    If you want to detect the same outlet pattern as mine, you can directly use the trained xml in dir 'classifier'. 
+    If you want to detect the same outlet pattern as mine, you can directly use the trained xml presented. 
     Otherwise, you need first empty the path 'classifier' and run train.bat (or change to train.sh on linux).
     
     train.bat

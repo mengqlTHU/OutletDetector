@@ -1,20 +1,20 @@
 import numpy as np
 import cv2
 
-# mode = "image"
-mode = "webcam"
-outlet_cascade = cv2.CascadeClassifier('./classifier/cascade.xml')
+mode = "image"
+# mode = "webcam"
+outlet_cascade = cv2.CascadeClassifier('./classifier_usa_outlet/cascade.xml')
 
 if mode=="image":
-    img = cv2.imread('test_outlet.jpg')
+    img = cv2.imread('test_image/test_outlet_usa.jpg')
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-    outlets = outlet_cascade.detectMultiScale(gray, 1.1, 2, minSize=(24,24))
+    outlets = outlet_cascade.detectMultiScale(gray, 1.1, 2, minSize=(12,12))
     for (x,y,w,h) in outlets:
         img = cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
 
     cv2.imshow('img',img)
-    cv2.imwrite('test_outlet_result.jpg', img)
+    cv2.imwrite('test_image/test_outlet_usa_result.jpg', img)
     cv2.waitKey(0)
 
 if mode=="webcam":
